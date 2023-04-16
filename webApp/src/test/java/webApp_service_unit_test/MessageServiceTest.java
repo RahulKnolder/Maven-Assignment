@@ -17,39 +17,23 @@ public class MessageServiceTest {
     private MessageService messageService;
 
     @Test
-    public void shouldReturnExpectedMessage() {
-        // Given
+    public void getMessage_withInputString_shouldReturnExpectedMessage() {
         String expectedMessage = "Hello, World!";
-
-        // When
         String actualMessage = messageService.getMessage();
-
-        // Then
         assertEquals(expectedMessage, actualMessage);
     }
 
     @Test
-    public void shouldReturnNonNullMessage() {
-        // Given - none
-
-        // When
+    public void getMessage_shouldReturnNonNullMessage() {
         String message = messageService.getMessage();
-
-        // Then
         assertNotNull(message);
     }
 
     @Test
-    public void shouldReturnNonEmptyMessage() {
-        // Given - none
-
-        // When
+    public void getMessage_shouldReturnNonEmptyMessage() {
         String message = messageService.getMessage();
-
-        // Then
         assertFalse(message.isEmpty());
     }
-
 
 }
 
